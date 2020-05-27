@@ -1,0 +1,61 @@
+html {
+    height: 100%;
+    min-height: 100%;
+}
+
+.nav {
+    display: grid;
+    place-items: center;
+    grid-gap: 10px;
+    grid-template-columns: auto auto 1fr auto auto auto auto;
+    grid-template-areas: 
+        "about store . gmail images menu account";
+}
+
+.nav a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.about {
+    grid-area: about;
+    color: black;
+    margin-left: 1rem;
+}
+
+.store {
+    grid-area: store;
+    color: black;
+}
+
+.gmail {
+    grid-area: gmail;
+    color: black;
+}
+
+.images {
+    grid-area: images;
+    color: black;
+}
+
+.menu {
+    grid-area: menu;
+}
+
+.menu img {
+    height: 30px;
+    width: 30px;
+}
+
+.account {
+    grid-area: account;
+    margin-right: 1rem;
+}
+
+.account img {
+    height: 40px;
+    width: 40px;
+}
