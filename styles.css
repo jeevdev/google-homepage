@@ -3,18 +3,23 @@ html {
     min-height: 100%;
 }
 
+.container {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
 .nav {
     display: grid;
     place-items: center;
     grid-gap: 10px;
     grid-template-columns: auto auto 1fr auto auto auto auto;
-    grid-template-rows: auto 1fr auto;
     grid-template-areas: 
         "about store . gmail images menu account";
 }
 
 .text-link {
     text-decoration: none;
+    color: black;
 }
 
 .text-link:hover {
@@ -23,23 +28,19 @@ html {
 
 .about {
     grid-area: about;
-    color: black;
     margin-left: 1rem;
 }
 
 .store {
     grid-area: store;
-    color: black;
 }
 
 .gmail {
     grid-area: gmail;
-    color: black;
 }
 
 .images {
     grid-area: images;
-    color: black;
 }
 
 .menu {
@@ -59,4 +60,66 @@ html {
 .account img {
     height: 40px;
     width: 40px;
+}
+
+#logo {
+    width: 300px;
+    height: 200px;
+    margin: 10px;
+}
+
+.search-field {
+    width: 340px;
+    height: 30px;
+    margin-top: 10px;
+    border: 2px solid lightgray;
+    border-radius: 20px;
+}
+
+button {
+    background-color: #f8f8f8;
+    border: 1px solid #c6c6c6;
+    padding: 10px;
+    margin: 10px 20px;
+}
+
+.footer {
+    display: grid;
+    place-items: center;
+    grid-gap: 10px;
+    background-color: lightgray;
+    padding: 10px;
+    width: 100%;
+    margin-left: -10px;
+    margin-right: 0px;
+    bottom: 0;
+    position: fixed;
+    grid-template-columns: repeat(3, auto) 1fr repeat(3, auto);
+    grid-template-areas: 
+        "advertising business how . privacy terms settings";
+}
+
+.advertising {
+    grid-area: advertising;
+}
+
+.business {
+    grid-area: business;
+}
+
+.how {
+    grid-area: how;
+}
+
+.privacy {
+    grid-area: privacy;
+}
+
+.terms {
+    grid-area: terms;
+}
+
+.settings {
+    grid-area: settings;
+    padding-right: 10px;
 }
