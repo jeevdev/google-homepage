@@ -8,15 +8,16 @@ html {
     place-items: center;
     grid-gap: 10px;
     grid-template-columns: auto auto 1fr auto auto auto auto;
+    grid-template-rows: auto 1fr auto;
     grid-template-areas: 
         "about store . gmail images menu account";
 }
 
-.nav a {
+.text-link {
     text-decoration: none;
 }
 
-a:hover {
+.text-link:hover {
     text-decoration: underline;
 }
 
